@@ -1,0 +1,405 @@
+/*fuentes*/
+
+/******************************************************************/
+/*****************************general******************************/
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    color: blanchedalmond;
+}
+/*grids*/
+.page-grid{
+    display: grid;
+    grid-template-areas:
+    "header"
+    "body"
+    "footer";
+    grid-template-columns: auto;
+    grid-template-rows: 5% auto 5%;
+}
+.header-grid{
+    grid-area: header;
+    border: 1px solid crimson;
+}
+.body-grid{
+    grid-area: body;
+}
+.footer-grid{
+    grid-area: footer;
+    border: 1px solid crimson;
+}
+/*header*/
+header{
+    display: grid;
+    grid-template-columns: 50px auto;
+    height: 90px;
+    background-color: black;
+}
+header img{
+    height: 90px;
+}
+.navegacion ul{
+    list-style: none;
+    font-size: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.navegacion li{
+    margin-top: 1.5%;
+    display: inline-block;
+    width: 10%;
+    position: relative;
+    font-size: 20px;
+}
+.navegacion ul ul{
+    position: absolute;
+    display: none;
+    border-radius: solid 2px crimson;
+    align-content: center;
+}
+.navegacion ul ul li{  
+    display: block;
+    border-radius: solid 2px crimson;
+    align-content: center;
+}
+.navegacion ul li:hover ul{
+    background-color: rgb(68, 67, 67);
+    display: block;
+}
+/*footer*/
+footer{
+    display: grid;
+    grid-template-columns: 200px auto;
+    height: 90px;
+    background-color: black;
+    margin-top: 30px;
+}
+footer img{
+    height: 90px;
+}
+/*Background*/
+body{
+    background: black;
+    background-image: url(../assets/images/interface/crypts.entrance.png);
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    color: blanchedalmond;
+    text-align: center;
+}
+/******************************************************************/
+/***************************index_page*****************************/
+.index-container-info{
+    width: 90%;
+    border: solid 1px blue;
+    margin: auto;
+}
+.separador{
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+/***seccion_1***/
+.seccion-info img{
+    width: 60%;
+}
+
+/***seccion_2***/
+/*video*/
+.video-container {
+    width:70%;
+    margin:auto;
+}
+.contenedor-video{
+    width:100%;
+    padding-top:56.25%;
+    position:relative;
+}
+iframe{
+    position:absolute;
+    height:100%;
+    width:100%;
+    top:0px;
+    left:0px;
+}
+/***seccion_3***/
+.index-heroes{
+    width: 60%;
+    margin-inline: auto;
+}
+.index-heroes h1{
+    background-image: url(../assets/images/interface/menu.element.png);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.index-heroes a{
+    text-align: end;
+    text-decoration: unset;
+    color: wheat;
+}
+/*iconos-de-heroes*/
+.index-hero-icons{
+    display: flex;
+    flex-direction: row; 
+    justify-content: space-around;
+    padding-top: 5%;
+}
+/***seccion_4***/
+.index-enemy img{
+    width: 60%;
+}
+.index-enemy a{
+    display: block;
+}
+.index-enemy img{
+    border-top: solid 5px rgb(156, 73, 73);
+    border-left: solid 5px rgb(156, 73, 73);
+    border-right: solid 5px rgb(156, 14, 42);
+    border-bottom: solid 5px rgb(156, 14, 42);
+}
+/******************************************************************/
+/****************************game_page*****************************/
+/*
+.battle{
+    overflow: hidden;
+}
+.battle div{
+    margin-top: -5%;
+}
+.cruzado{
+    height: 800px;
+}
+.esqueleto{
+    height: 500px;
+}
+*/
+/*Sala de batalla*/
+.battle{
+    background-color: transparent ;
+    background-image: url(../assets/images/interface/crypts.room_altar.png);
+    background-size: 900px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 600px;
+    width: 1520px;
+    border: 1px solid crimson;
+    margin: auto;
+    align-items: center;
+}
+/*Background tabla de contenido*/
+#BattleStateAll{
+    display: grid;
+    grid-template-columns: auto auto;
+    pad: 0;
+    justify-content: center;
+    align-content: center;
+}
+#battleStateBannerLeft{
+    background-image: url(../assets/images/interface/panel/panelLeft.png);
+    background-repeat: no-repeat;
+    height: 270px;
+    width: 760px;
+    border: 1px solid crimson; 
+}
+#battleStateBannerRight{
+    background-image: url(../assets/images/interface/panel/panelRight.png);
+    background-repeat: no-repeat;
+    height: 270px;
+    width: 760px;
+    border: 1px solid crimson;
+}
+/******************************************************************/
+/***************************heroes_page****************************/
+/*hero and enemy tables*/
+/*heros-page*/
+.hero-page-container{
+    width: 70%;
+    margin: auto;
+}
+.tabla-hero-container{
+    background-color: black;
+    margin-top: 30px;
+    width: 100%;
+    border: 1px solid crimson;
+    display: grid;
+    grid-template-areas:
+      "portraitImg hp info";
+    grid-template-rows: 1fr; 
+    grid-template-columns: 100px 40px auto;
+}
+
+.tabla-enemy-container div div img{
+    width: 200px;
+}
+/*portrait*****/
+.section-table{
+    grid-area: portraitImg;
+    display: grid;
+    grid-template-rows: 40px 1fr 1fr 1fr;
+}
+.section-table div{
+    border: 1px solid crimson;
+}
+/*hp*****/
+.section-table2{
+    grid-area: hp;
+    display: grid;
+    grid-template-rows: 40px 1fr 1fr 1fr;
+}
+.section-table2 div{
+    border: 1px solid crimson;
+}
+/*info*****/
+.section-table3{
+    grid-area: info;
+    display: grid;
+    grid-template-rows: 40px 1fr 1fr 1fr;
+}
+.section-table3 div{
+    border: 1px solid crimson;
+}
+/*enemy-page*/
+.tabla-enemy-container{
+    background-color: black;
+    margin-top: 30px;
+    width: 100%;
+    border: 1px solid crimson;
+    display: grid;
+    grid-template-areas:
+      "portraitImg hp info";
+    grid-template-rows: 1fr; 
+    grid-template-columns: 200px 40px auto;
+}
+.section-table2 div, .section-table div, .titulo-tabla{
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+}
+.entidad-info{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    text-align: left;
+    padding: 20px;
+}
+/******************************************************************/
+/****************************news_page*****************************/
+.news-content a{
+    width: 40%;
+}
+/******************************************************************/
+/***************************media_page*****************************/
+/*art-section*/
+.art-container div img{
+    border: 2px solid grey;
+    width: 35%;
+}
+.art-container{
+    display: flex;
+    flex-direction: row; 
+    justify-content: center;
+}
+/******************************************************************/
+/**************************mobile_first****************************/
+@media only screen and (min-width: 0px) {
+    body {
+        background-image: url(../assets/images/interface/fondo_movile_B.jpg);
+      }
+}
+
+
+@media only screen and (min-width: 768px) {
+    body {
+        background-image: url(../assets/images/interface/fondo_movile.png);
+      }
+}
+
+
+@media only screen and (min-width: 1200px) {
+    body {
+        background-image: url(../assets/images/interface/crypts.entrance.png);
+      }
+}
+/******************************************************************/
+/************************ultimos_cambios***************************/
+
+/*gradientes*/
+/*hero-enemy-pages*/
+.tabla-hero-container, .tabla-enemy-container{
+    background-image: linear-gradient(black, black, rgb(43, 5, 12));
+}
+
+/*animacion*/
+/*game-page*/
+.battle{
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+.battle{
+    overflow: hidden;
+    display: flex;  
+    flex-direction: row; 
+    justify-content: center;
+}
+.cruzado{
+    width: 330px;
+    margin-top: 45px;
+}
+.esqueleto{
+    width: 300px;
+    margin-top: 275px;
+}
+.anim-hero-symbol{
+    position: absolute;
+    width: 410px;
+    left: 500px;
+}
+.battle div div{
+    position: relative;
+    top: -640px;
+    right: 492px;
+}
+.anim-hero-halo{
+    position: absolute;
+    width: 410px;
+    left: 530px;
+    top: -88px;
+}
+.opacity{
+    filter: opacity(0);
+    animation-name: efecto_symbol;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in;
+    animation-duration: 12s;
+    animation-delay: 0s;
+}
+.anim-giro-izq{
+    filter: opacity(0);
+    animation-name: efecto_giro_izq;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in;
+    animation-duration: 12s;
+    animation-delay: 0s;
+}
+.anim-giro-der{
+    filter: opacity(0);
+    animation-name: efecto_giro_der;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in;
+    animation-duration: 12s;
+    animation-delay: 0s;
+}
+@keyframes efecto_giro_izq {
+    70%{transform: rotate(-1.0turn);}
+    25%{filter: opacity(1);}
+}
+@keyframes efecto_giro_der {
+    70%{transform: rotate(1.0turn);}
+    25%{filter: opacity(1);}
+}
+@keyframes efecto_symbol {
+    25%{filter: opacity(1);}
+    70%{transform: saturate(200%)}
+}
+ 
